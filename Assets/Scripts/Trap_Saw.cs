@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Trap_Saw : MonoBehaviour
 {
-    private Rigidbody2D rigidbody;
     private Animator animator;
-    public Transform[] points; // Các điểm A, B, C, D
+    public Transform[] points;
     public float speed = 5f; // Tốc độ di chuyển
     private int currentPointIndex = 0; // Index của điểm hiện tại
     private int direction = 1; // Hướng di chuyển: 1 là chuyển từ điểm A đến D, -1 là chuyển từ D về A
@@ -15,7 +14,6 @@ public class Trap_Saw : MonoBehaviour
 
     private void Awake()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
     void Update()

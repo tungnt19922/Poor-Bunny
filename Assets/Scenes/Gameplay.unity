@@ -2682,9 +2682,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc90d599019d11c46a2aa58022d84b9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowPrefab: {fileID: 1584850769}
-  spawnInterval: 3
-  startDelay: 10
+  speed: 0
+  firstSpeed: 0.5
+  secondSpeed: 3
+  waitTime: 2
 --- !u!1 &2111188630
 GameObject:
   m_ObjectHideFlags: 0
@@ -3832,11 +3833,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8675706479071043471, guid: 3b99a7c2dadbd134bbd15ca2a68dcc9d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.19
+      value: 3.23
       objectReference: {fileID: 0}
     - target: {fileID: 8675706479071043471, guid: 3b99a7c2dadbd134bbd15ca2a68dcc9d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.39
+      value: 4.99
       objectReference: {fileID: 0}
     - target: {fileID: 8675706479071043471, guid: 3b99a7c2dadbd134bbd15ca2a68dcc9d, type: 3}
       propertyPath: m_LocalPosition.z
