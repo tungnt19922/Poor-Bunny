@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -58,5 +59,14 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = true;
         }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("enemy")) Die();
+    }
+
+    private void Die()
+    {
+        Debug.Log("player trung dan");
     }
 }
