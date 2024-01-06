@@ -6,14 +6,20 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] Animator anim;
+
     [SerializeField] float speed = 10f;
     [SerializeField] float horizontalInput;
     [SerializeField] float jumpForce = 5f;
     [SerializeField] bool isGrounded;
+
+    [SerializeField] private bool isMoving = false;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -23,6 +29,11 @@ public class PlayerController : MonoBehaviour
         Move();
         Jump();
         Flip();
+        AnimatorController();
+    }
+    private void AnimatorController()
+    {
+        anim.SetBool("isMoving", isMoving);
     }
 
     private void Flip()
@@ -43,7 +54,11 @@ public class PlayerController : MonoBehaviour
         if (horizontalInput != 0)
         {
             rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
-        } 
+            isMoving = true;
+        }
+
+        if (horizontalInput == 0)
+            isMoving = false;
     }
     private void Jump()
     {
