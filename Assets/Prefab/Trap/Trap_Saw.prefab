@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7351841524481305983}
   - component: {fileID: 7351841524481305980}
   - component: {fileID: 7351841524481305981}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Trap_Saw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
