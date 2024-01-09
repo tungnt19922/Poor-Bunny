@@ -33,6 +33,8 @@ public class PlayerController : MonoBehaviour
     }
     private void AnimatorController()
     {
+        anim.SetBool("isGrounded", isGrounded);
+        anim.SetFloat("yVelocity", rb.velocity.y);
         anim.SetBool("isMoving", isMoving);
     }
 
