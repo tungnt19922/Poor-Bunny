@@ -17,7 +17,6 @@ public class Trap_Cannon : MonoBehaviour
     }
     private void Attack()
     {
-        Debug.Log("ban mui ten");
         cooldownTimer = 0;
         Instantiate(arrow, firePoint.position, Quaternion.Euler(new Vector3 (transform.position.x, transform.position.y, direction * (transform.position.z + 90))));
     }

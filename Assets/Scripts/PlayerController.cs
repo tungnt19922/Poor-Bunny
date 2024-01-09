@@ -8,18 +8,23 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Animator anim;
 
+    [Header ("Move Script")]
     [SerializeField] float speed = 10f;
     [SerializeField] float horizontalInput;
     [SerializeField] float jumpForce = 5f;
-    [SerializeField] bool isGrounded;
 
+    [Header("Status")]
+    [SerializeField] bool isGrounded;
+    [SerializeField] bool isDead;
     [SerializeField] private bool isMoving = false;
+    public Action onDead;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        isDead = false;
     }
 
     // Update is called once per frame
@@ -36,6 +41,7 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("isGrounded", isGrounded);
         anim.SetFloat("yVelocity", rb.velocity.y);
         anim.SetBool("isMoving", isMoving);
+        anim.SetBool("isDead", isDead);
     }
 
     private void Flip()
@@ -72,18 +78,24 @@ public class PlayerController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("foreground"))
         {
             isGrounded = true;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("enemy")) Die();
+        if (collision.CompareTag("enemy"))
+        {
+            isDead = true;
+            onDead?.Invoke();
+            Debug.Log("player dead");
+        }
+
     }
 
-    private void Die()
+    public void Die()
     {
-        Debug.Log("player trung dan");
+
     }
 }
