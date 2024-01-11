@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2395866128455460240}
   - component: {fileID: 5435235367051118081}
   - component: {fileID: 3220776042651882446}
-  - component: {fileID: 6346951176306744981}
+  - component: {fileID: 2097471509}
   m_Layer: 0
   m_Name: Cherry
   m_TagString: Untagged
@@ -133,7 +133,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.44644308, y: 0.42653477}
   m_EdgeRadius: 0
---- !u!114 &6346951176306744981
+--- !u!114 &2097471509
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,9 +142,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 481784653586541990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fff01e8b2bd6c264c9e10049eb0c7923, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a5ef87c9d301984f8ac00c23e8a2af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collected: 0
+  _score: 3
   lifeTime: 5
   countLifeTime: 0
-  collected: 0

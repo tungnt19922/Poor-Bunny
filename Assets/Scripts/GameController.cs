@@ -7,9 +7,6 @@ public class GameController : MonoBehaviour
 {
     [SerializeField] private GameObject gameOverUI;
     [SerializeField] private PlayerController playerController;
-    [SerializeField] private Fruits fruits;
-
-
 
     private void Start()
     {

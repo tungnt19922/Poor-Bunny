@@ -9,7 +9,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] Text scoreText;
     [SerializeField] Text highScoreText;
 
-    private int score = 0;
+    private int _score = 0;
     private int highScore = 0;
 
     private void Awake()
@@ -18,17 +18,17 @@ public class ScoreManager : MonoBehaviour
     }
     private void Start()
     {
-        scoreText.text = "Score: " + score;
+        scoreText.text = "Score: " + _score;
         highScoreText.text = "Highscore: " + highScore;
     }
     public void AddPointApple()
     {
-        score += 1;
-        scoreText.text = "Score: " + score;
+        _score += 1;
+        scoreText.text = "Score: " + _score;
     }    
-    public void AddPointCherry()
+    public void AddPoint(int score)
     {
-        score += 3;
-        scoreText.text = "Score: " + score;
+        _score += score;
+        scoreText.text = "Score: " + _score;
     }
 }
