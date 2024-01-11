@@ -21,10 +21,14 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = "Score: " + score;
         highScoreText.text = "Highscore: " + highScore;
     }
-    public void AddPoint()
+    public void AddPointApple()
     {
         score += 1;
         scoreText.text = "Score: " + score;
-
+    }    
+    public void AddPointCherry()
+    {
+        score += 3;
+        scoreText.text = "Score: " + score;
     }
 }
