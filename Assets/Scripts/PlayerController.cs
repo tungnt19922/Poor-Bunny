@@ -90,8 +90,8 @@ public class PlayerController : MonoBehaviour
             isDead = true;
             onDead?.Invoke();
             Debug.Log("player dead");
+            Destroy(gameObject,2);
         }
-
     }
 
     public void Die()

@@ -8,7 +8,7 @@ public class CanvasGameplay : MonoBehaviour
 {
     public void OnReplayButtonClicked()
     {
-        Debug.Log("Player hoi sinh");
+        SceneManager.LoadScene("Gameplay");
     }
     public void OnNonReplayButtonClicked()
     {
