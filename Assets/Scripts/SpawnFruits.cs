@@ -40,6 +40,5 @@ public class SpawnFruits : MonoBehaviour
         if (apple != null)
             Instantiate(apple, new Vector2 (Random.Range(-6,6), Random.Range(-2,4)), Quaternion.identity);
     }
-
 }
 

@@ -2362,10 +2362,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6346951176306744981, guid: 6f1e1f8b6aee2c34a86a876cd78080e8, type: 3}
-      propertyPath: collected
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f1e1f8b6aee2c34a86a876cd78080e8, type: 3}
 --- !u!4 &814546014 stripped
@@ -3064,7 +3060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 1266530492}
   playerController: {fileID: 1672344641}
-  fruits: {fileID: 616719888488680286, guid: e2e978066ad4db345a42cf58bdd48dec, type: 3}
+  fruits: {fileID: 0}
 --- !u!4 &1798515587
 Transform:
   m_ObjectHideFlags: 0

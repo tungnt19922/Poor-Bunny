@@ -6,6 +6,7 @@ public class Fruits2 : MonoBehaviour
 {
     [SerializeField] private float lifeTime;
     [SerializeField] private float countLifeTime;
+    [SerializeField] private BoxCollider2D boxCollider;
 
     private Animator anim;
     [SerializeField] private bool collected = false;
@@ -13,16 +14,12 @@ public class Fruits2 : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     private void Update()
     {
-        countLifeTime += Time.deltaTime;
-        if (countLifeTime >= lifeTime)
-        {
-            collected = true;
-            Destroy(gameObject);
-        }
+        AutoDestroyFruits();
         AnimatorController();
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,18 +27,25 @@ public class Fruits2 : MonoBehaviour
         if (collision.CompareTag("player"))
         {
             ScoreManager.instance.AddPointCherry();
-            collected = true;
-            Destroy(gameObject);
+            FruitDestroy();
         }
+    }
+
+    private void AutoDestroyFruits()
+    {
+        countLifeTime += Time.deltaTime;
+        if (countLifeTime >= lifeTime)
+            FruitDestroy();
+    }
+    private void FruitDestroy()
+    {
+        collected = true;
+        boxCollider.enabled = !boxCollider.enabled;
+        Destroy(gameObject, 1);
     }
 
     private void AnimatorController()
     {
         anim.SetBool("collected", collected);
     }
-
-
-
-
-
 }

@@ -54,6 +54,9 @@ TagManager:
   - name: Trap
     uniqueID: 3540734567
     locked: 0
+  - name: Fruits
+    uniqueID: 2805858007
+    locked: 0
   - name: Player
     uniqueID: 4260486573
     locked: 0

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 616719888488680284}
   - component: {fileID: 616719888488680283}
   - component: {fileID: 616719888488680282}
-  - component: {fileID: 616719888488680286}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Untagged
@@ -73,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1489109289
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 7293598183456022363, guid: 1ddc9afd21fec77489b1248d18f31b68, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -133,15 +132,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.40871024, y: 0.36563313}
   m_EdgeRadius: 0
---- !u!114 &616719888488680286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 616719888488680281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f63a11f8fd80baa4ca2b463108f40c76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
