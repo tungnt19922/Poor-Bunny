@@ -9,6 +9,9 @@ public class Fruits2 : MonoBehaviour
     [SerializeField] private bool collected = false;
     [SerializeField] protected int _score;
 
+    [Header("Sound Manager")]
+    [SerializeField] AudioClip pickupSound;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -23,6 +26,7 @@ public class Fruits2 : MonoBehaviour
     {
         if (collision.CompareTag("player"))
         {
+            SoundManager.instance.PlaySound(pickupSound);
             ScoreManager.instance.AddPoint(_score);
             FruitDestroy();
         }

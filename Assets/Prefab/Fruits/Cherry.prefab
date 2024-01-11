@@ -147,5 +147,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collected: 0
   _score: 3
+  pickupSound: {fileID: 8300000, guid: 68c80fe26cfeaab499cf1f2acf1a1478, type: 3}
   lifeTime: 5
   countLifeTime: 0

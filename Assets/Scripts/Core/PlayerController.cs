@@ -8,6 +8,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Animator anim;
 
+    [Header("Sound Manager")]
+    [SerializeField] AudioClip jumpSound;
+    [SerializeField] AudioClip deathSound;
+
+
     [Header ("Move Script")]
     [SerializeField] float speed = 10f;
     [SerializeField] float horizontalInput;
@@ -31,9 +36,12 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
-        Move();
-        Jump();
-        Flip();
+        if (!isDead )
+        {
+            Move();
+            Jump();
+            Flip();
+        }
         AnimatorController();
     }
     private void AnimatorController()
@@ -64,7 +72,6 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
             isMoving = true;
         }
-
         if (horizontalInput == 0)
             isMoving = false;
     }
@@ -74,6 +81,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             isGrounded = false;
+            SoundManager.instance.PlaySound(jumpSound);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -89,13 +97,9 @@ public class PlayerController : MonoBehaviour
         {
             isDead = true;
             onDead?.Invoke();
-            Debug.Log("player dead");
+            SoundManager.instance.PlaySound(deathSound);
             Destroy(gameObject,2);
+
         }
-    }
-
-    public void Die()
-    {
-
     }
 }
