@@ -79,9 +79,9 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
+            AudioManager.instance.PlaySFX("Jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             isGrounded = false;
-            SoundManager.instance.PlaySound(jumpSound);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -95,9 +95,9 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.CompareTag("enemy"))
         {
+            AudioManager.instance.PlaySFX("GameOver");
             isDead = true;
             onDead?.Invoke();
-            SoundManager.instance.PlaySound(deathSound);
             Destroy(gameObject,2);
 
         }

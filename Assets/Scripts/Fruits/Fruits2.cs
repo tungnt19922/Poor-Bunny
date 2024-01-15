@@ -26,7 +26,7 @@ public class Fruits2 : MonoBehaviour
     {
         if (collision.CompareTag("player"))
         {
-            SoundManager.instance.PlaySound(pickupSound);
+            AudioManager.instance.PlaySFX("Collect");
             ScoreManager.instance.AddPoint(_score);
             FruitDestroy();
         }
