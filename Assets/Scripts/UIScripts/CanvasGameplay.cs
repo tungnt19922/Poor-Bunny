@@ -13,5 +13,6 @@ public class CanvasGameplay : MonoBehaviour
     public void OnNonReplayButtonClicked()
     {
         SceneManager.LoadScene("MainMenu");
+        AudioManager.instance.PlayMusic("Theme");
     }
 }

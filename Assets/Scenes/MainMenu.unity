@@ -1600,6 +1600,8 @@ MonoBehaviour:
   musicSounds:
   - name: Theme
     clip: {fileID: 8300000, guid: e2c9b5f190ea32e49a79feb88920b091, type: 3}
+  - name: Play
+    clip: {fileID: 8300000, guid: d8f7a78a964aa489aafb3749d805cd4b, type: 3}
   sfxSounds:
   - name: Jump
     clip: {fileID: 8300000, guid: 638c07f4bd58764429e2e6ba8e8c0644, type: 3}

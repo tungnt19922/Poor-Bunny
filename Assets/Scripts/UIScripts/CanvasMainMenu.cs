@@ -8,5 +8,6 @@ public class CanvasMainMenu : MonoBehaviour
     public void OnPlayButtonClicked()
     {
         SceneManager.LoadScene("Gameplay");
+        AudioManager.instance.PlayMusic("Play");
     }
 }
