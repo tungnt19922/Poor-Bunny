@@ -2833,6 +2833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d060f12aac6b82c4a883de53ef7b06f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverUI: {fileID: 1266530492}
 --- !u!114 &1266530495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5791,6 +5792,10 @@ PrefabInstance:
     - target: {fileID: 8941650648033590275, guid: 84f0c708ae85c204f93ce10e485bb499, type: 3}
       propertyPath: m_Name
       value: trapSawMovePoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941650648033590275, guid: 84f0c708ae85c204f93ce10e485bb499, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84f0c708ae85c204f93ce10e485bb499, type: 3}

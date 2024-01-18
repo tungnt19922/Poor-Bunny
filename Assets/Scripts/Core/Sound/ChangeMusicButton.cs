@@ -21,14 +21,14 @@ public class ChangeMusicButton : MonoBehaviour
             Debug.Log("sound off");
             button.image.sprite = soundOffImage;
             isOn = false;
-            AudioManager.instance.ToggleMusic();
+            AudioManager.Instance.ToggleMusic();
         }
         else
         {
             Debug.Log("sound on");
             button.image.sprite = soundOnImage;
             isOn = true;
-            AudioManager.instance.ToggleMusic();
+            AudioManager.Instance.ToggleMusic();
         }
     }
 }

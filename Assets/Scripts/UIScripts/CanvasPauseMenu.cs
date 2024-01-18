@@ -37,7 +37,7 @@ public class CanvasPauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         SceneManager.LoadScene("MainMenu");
-        AudioManager.instance.PlayMusic("Theme");
+        AudioManager.Instance.PlayMusic("Theme");
     }
     public void Replay()
     {

@@ -6,13 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class CanvasGameplay : MonoBehaviour
 {
+    [SerializeField] private GameObject gameOverUI;
     public void OnReplayButtonClicked()
     {
         SceneManager.LoadScene("Gameplay");
+        gameOverUI.SetActive(false);
     }
     public void OnNonReplayButtonClicked()
     {
         SceneManager.LoadScene("MainMenu");
-        AudioManager.instance.PlayMusic("Theme");
+        AudioManager.Instance.PlayMusic("Theme");
+        gameOverUI.SetActive(false);
     }
 }

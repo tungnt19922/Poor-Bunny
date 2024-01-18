@@ -21,14 +21,14 @@ public class ChangeVFXButton : MonoBehaviour
             Debug.Log("sound off");
             button.image.sprite = vfxOffImage;
             isOn = false;
-            AudioManager.instance.ToggleSFX();
+            AudioManager.Instance.ToggleSFX();
         }
         else
         {
             Debug.Log("sound on");
             button.image.sprite = vfxOnImage;
             isOn = true;
-            AudioManager.instance.ToggleSFX();
+            AudioManager.Instance.ToggleSFX();
         }
     }
 }
