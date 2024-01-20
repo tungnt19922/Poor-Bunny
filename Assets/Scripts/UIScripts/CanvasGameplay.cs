@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class CanvasGameplay : MonoBehaviour
 {
-    [SerializeField] private GameObject gameOverUI;
+    [SerializeField] GameObject gameOverUI;
+
     public void OnReplayButtonClicked()
     {
         SceneManager.LoadScene("Gameplay");

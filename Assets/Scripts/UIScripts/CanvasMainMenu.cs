@@ -6,11 +6,13 @@ using UnityEngine.UI;
 
 public class CanvasMainMenu : MonoBehaviour
 {
-    [SerializeField] Text goldText;
-    int gold;
+    [SerializeField] GameObject mainmenuPanel;
+    [SerializeField] GameObject shopPanel;
+
     private void Start()
     {
-        goldText.text = "" + gold;
+        mainmenuPanel.SetActive(true);
+        shopPanel.SetActive(false);
     }
 
     public void OnPlayButtonClicked()
@@ -19,5 +21,9 @@ public class CanvasMainMenu : MonoBehaviour
         AudioManager.Instance.PlayMusic("Play");
     }
 
-
+    public void OnShopButtionClicked()
+    {
+        mainmenuPanel.SetActive(false);
+        shopPanel.SetActive(true);
+    }
 }
