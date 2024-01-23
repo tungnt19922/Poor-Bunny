@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class SkinSelect : MonoBehaviour
 {
-    public int selectedSkin; 
+    public SkinType selectedSkin; 
     private void Awake()
     {
-        selectedSkin = PlayerPrefs.GetInt("SelectedSkin", 0);
+        selectedSkin = GameState.Instance.CurrentSkin;
     }
 
 
-    public void SelectedSkin1 ()
+    public void SelectedSkin(int skin)
     {
-        PlayerPrefs.SetInt("SelectedSkin", 1);
+        GameState.Instance.CurrentSkin = (SkinType)skin;
     }
-    public void SelectedSkin0 ()
-    {
-        PlayerPrefs.SetInt("SelectedSkin", 0);
-    }
+
 
 }

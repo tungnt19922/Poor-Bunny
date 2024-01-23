@@ -12,15 +12,10 @@ public class GameController : MonoBehaviour
     int characterIndex;
     public static Vector2 startPosition = new Vector2(0, 0);
 
-    private void Awake()
-    {
-        characterIndex = PlayerPrefs.GetInt("SelectedSkin", 0);
-        Instantiate(playerPrefabs[characterIndex], startPosition, Quaternion.identity);
-    }
 
     private void Start()
     {
-        playerController = FindObjectOfType<PlayerController>();
+        playerController = SkinManager.Instance.GetPlayer();
         gameOverUI.SetActive(false);
         playerController.onDead += OnGameOver;
     }
