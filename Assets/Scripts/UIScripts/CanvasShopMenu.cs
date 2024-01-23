@@ -13,11 +13,6 @@ public class CanvasShopMenu : MonoBehaviour
     {
         skinPanel[selectedPanel].SetActive(true);
     }
-    public void BackButtonClicked()
-    {
-        mainmenuPanel.SetActive(true);
-        shopPanel.SetActive(false);
-    }
 
     public void NextPanel()
     {
@@ -35,6 +30,5 @@ public class CanvasShopMenu : MonoBehaviour
         if (selectedPanel == -1)
             selectedPanel = skinPanel.Length - 1;
         skinPanel[selectedPanel].SetActive(true);
-
     }
 }

@@ -38,6 +38,7 @@ public class CanvasPauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
         AudioManager.Instance.PlayMusic("Theme");
+        Time.timeScale = 1f;
     }
     public void Replay()
     {
