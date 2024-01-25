@@ -22,7 +22,7 @@ public class SkinManager : MonoBehaviourSingleton<SkinManager>
     {
         var currentSkin = GameState.Instance.CurrentSkin;
         var currentSkinPlayer = players.Find(playerSkin => playerSkin.type == currentSkin);
-        if (currentSkinPlayer != null)
+        if (currentSkinPlayer != null)  
         {
             currentPlayer = currentSkinPlayer.player;
             currentPlayer.gameObject.SetActive(true);
