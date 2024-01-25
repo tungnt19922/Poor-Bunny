@@ -2124,15 +2124,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff8d339de0346204f8a98d7a9cf0aa58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players:
+  playerskins:
   - type: 0
     player: {fileID: 745832568}
+    skinPrice: 0
+    isUnlocked: 0
   - type: 1
     player: {fileID: 1039698239}
+    skinPrice: 2
+    isUnlocked: 0
   - type: 2
     player: {fileID: 234167474057342970}
+    skinPrice: 3
+    isUnlocked: 0
   - type: 3
     player: {fileID: 8034618186826441643}
+    skinPrice: 4
+    isUnlocked: 0
 --- !u!4 &522161358
 Transform:
   m_ObjectHideFlags: 0

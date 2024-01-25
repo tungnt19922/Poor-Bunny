@@ -20,7 +20,14 @@ public class GoldManager : MonoBehaviourSingletonPersistent<GoldManager>
         _gold += gold;
         goldText.text = ": " + _gold;
         SaveGold();
+    }    
+    public void SubtractGold(int gold)
+    {
+        _gold -= gold;
+        goldText.text = ": " + _gold;
+        SaveGold();
     }
+
     public void SaveGold()
     {
         PlayerPrefs.SetInt("PlayerGold", _asset);
@@ -30,4 +37,9 @@ public class GoldManager : MonoBehaviourSingletonPersistent<GoldManager>
     {
         _gold = PlayerPrefs.GetInt("PlayerGold", _asset);
     }
+    public int CurrentGold()
+    {
+        return _asset;
+    }
+
 }

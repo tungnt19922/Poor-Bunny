@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SkinManager : MonoBehaviourSingleton<SkinManager>
 {
-    [SerializeField] private List<PlayerSkin> players;
+    [SerializeField] private List<PlayerSkin> playerskins;
     private PlayerController currentPlayer;
 
     private void Start()
@@ -21,7 +21,7 @@ public class SkinManager : MonoBehaviourSingleton<SkinManager>
     private void EnableCurrentSkin()
     {
         var currentSkin = GameState.Instance.CurrentSkin;
-        var currentSkinPlayer = players.Find(playerSkin => playerSkin.type == currentSkin);
+        var currentSkinPlayer = playerskins.Find(playerSkin => playerSkin.type == currentSkin);
         if (currentSkinPlayer != null)  
         {
             currentPlayer = currentSkinPlayer.player;
@@ -31,7 +31,7 @@ public class SkinManager : MonoBehaviourSingleton<SkinManager>
 
     private void DeactiveSkins()
     {
-        foreach (var playerSkin in players)
+        foreach (var playerSkin in playerskins)
 
         {
             playerSkin.player.gameObject.SetActive(false);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SkinSelect : MonoBehaviour
 {
-    public SkinType selectedSkin; 
+    public SkinType selectedSkin;
     private void Awake()
     {
         selectedSkin = GameState.Instance.CurrentSkin;
@@ -15,6 +15,7 @@ public class SkinSelect : MonoBehaviour
     {
         GameState.Instance.CurrentSkin = (SkinType)skin;
     }
+
 
 
 }
