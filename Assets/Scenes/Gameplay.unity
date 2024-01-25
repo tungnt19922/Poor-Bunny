@@ -3609,9 +3609,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 1266530492}
   playerController: {fileID: 0}
-  playerPrefabs:
-  - {fileID: 7465244832427114580, guid: 49b2cc3e392c94243b5da0a3a5151c30, type: 3}
-  - {fileID: 5519890217403370196, guid: dc1a96c78adafdf45acaaf79f6ac3e97, type: 3}
 --- !u!4 &1798515587
 Transform:
   m_ObjectHideFlags: 0
