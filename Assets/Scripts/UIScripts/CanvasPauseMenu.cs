@@ -39,11 +39,13 @@ public class CanvasPauseMenu : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
         AudioManager.Instance.PlayMusic("Theme");
         Time.timeScale = 1f;
+        GameIsPaused = false;
     }
     public void Replay()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Gameplay");
+        GameIsPaused = false;
     }
 
 }
