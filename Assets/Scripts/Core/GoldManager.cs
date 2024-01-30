@@ -7,8 +7,7 @@ public class GoldManager : MonoBehaviourSingletonPersistent<GoldManager>
 {
     [SerializeField] Text goldText;
 
-    private int _gold = 0;
-    private int _asset = 0;
+    [SerializeField] private int _gold = 0;
 
     private void Start()
     {
@@ -21,13 +20,25 @@ public class GoldManager : MonoBehaviourSingletonPersistent<GoldManager>
         goldText.text = ": " + _gold;
         SaveGold();
     }
+    public void SubtractGold(int gold)
+    {
+        _gold -= gold;
+        goldText.text = ": " + _gold;
+        SaveGold();
+    }
+
+
     public void SaveGold()
     {
-        PlayerPrefs.SetInt("PlayerGold", _asset);
+        PlayerPrefs.SetInt("PlayerGold", _gold);
         PlayerPrefs.Save();
     }
     public void LoadGold()
     {
-        _gold = PlayerPrefs.GetInt("PlayerGold", _asset);
+        _gold = PlayerPrefs.GetInt("PlayerGold", _gold);
+    }
+    public int Asset()
+    {
+        return _gold;
     }
 }

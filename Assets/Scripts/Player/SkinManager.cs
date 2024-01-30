@@ -42,8 +42,4 @@ public class SkinManager : MonoBehaviourSingleton<SkinManager>
     {
         return currentPlayer;
     }
-
-
-
-
 }
